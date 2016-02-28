@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+main()
+    { int counter =0, max = 0;
+       char symbol;
+        freopen( "INPUT.TXT", "r", stdin );
+         freopen( "OUTPUT.TXT", "w", stdout );
+          while ( scanf("%c", &symbol) != EOF )    /* Считываем символы пока не достигнем конца строки */
+                { if ( symbol == 48)            /* Сравниваем символ со значением '0'. В ASCII '0' соответствует значение 48 */
+                     { if (counter > max)
+                          { max = counter;       /* Если значение счетчика counter больше max, то оно присваивается переменной max, затем сщгтеук обнуляется */
+                             counter = 0;
+                          }      
+                     } 
+                  else counter++;           /* Если символ не равен нулю( в нашем случае 1), то к counter прибавляется единица*/
+                }     
+                     printf("Max length %d\n", max);
+                       return 0;   
+                }     
