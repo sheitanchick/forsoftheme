@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+main() 
+       { int prev = NULL, thisnum = 0, next = 1, in;
+          printf( "\nEnter number in = " );
+           scanf( "%d", &in );
+
+ while ( thisnum <= in ) 
+                        { prev = thisnum;
+ 			               thisnum = next;
+ 				            next = prev + thisnum;
+ 						if ( thisnum == in ) 
+                                            { printf("\nin = %d belongs to the Fibonacci sequence ", thisnum );
+ 									          break;
+                                            }
+ 						else if ( thisnum > in )
+						  			            { printf("\nin = %d does not belong to the Fibonacci sequence ", in );
+ 									               break;
+						                        }
+						}
+         getchar ();
+          getchar ();
+           return 0;
+        }
